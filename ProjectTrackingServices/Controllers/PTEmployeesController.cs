@@ -1,39 +1,65 @@
-﻿using System;
+﻿using ProjectTrackingServices.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ProjectTrackingServices.Controllers
 {
+    [EnableCors(origins: "http://localhost:55058", headers: "*", methods: "*")]
     public class PTEmployeesController : ApiController
     {
-        // GET: api/PTEmployees
-        public IEnumerable<string> Get()
+        // GET api/ptemployees
+        [Route("api/ptemployees")]
+        public HttpResponseMessage Get()
         {
-            return new string[] { "value1", "value2" };
+            var employees = EmployeesRepository.GetAllEmployees();
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, employees);
+            return response;
         }
 
-        // GET: api/PTEmployees/5
-        public string Get(int id)
+        // GET api/ptemployees/5
+        [Route("api/ptemployees/{id?}")]
+        public HttpResponseMessage Get(int id)
         {
-            return "value";
+            var employees = EmployeesRepository.GetEmployee(id);
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, employees);
+            return response;
         }
 
-        // POST: api/PTEmployees
-        public void Post([FromBody]string value)
+        [Route("api/ptemployees/{name:alpha}")]
+        public HttpResponseMessage Get(string name)
         {
+            var employees = EmployeesRepository.SearchEmployeesByName(name);
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, employees);
+            return response;
         }
 
-        // PUT: api/PTEmployees/5
-        public void Put(int id, [FromBody]string value)
+        [Route("api/ptemployees")]
+        public HttpResponseMessage Post(Employee e)
         {
+            var employees = EmployeesRepository.InsertEmployee(e);
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, employees);
+            return response;
         }
 
-        // DELETE: api/PTEmployees/5
-        public void Delete(int id)
+        [Route("api/ptemployees")]
+        public HttpResponseMessage Put(Employee e)
         {
+            var employees = EmployeesRepository.UpdateEmployee(e);
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, employees);
+            return response;
+        }
+
+        [Route("api/ptemployees")]
+        public HttpResponseMessage Delete(Employee e)
+        {
+            var employees = EmployeesRepository.DeleteEmployee(e);
+            HttpResponseMessage response = Request.CreateResponse(HttpStatusCode.OK, employees);
+            return response;
         }
     }
 }
