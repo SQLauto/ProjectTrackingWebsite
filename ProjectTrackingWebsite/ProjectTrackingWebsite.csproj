@@ -66,6 +66,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CSS\bootstrap-paper.css" />
+    <Content Include="CSS\bootstrap-paper.min.css" />
+    <Content Include="CSS\Site.css" />
+    <Content Include="Home.html" />
     <Content Include="packages.config" />
     <Content Include="README.md" />
     <None Include="Web.Debug.config">
@@ -83,7 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="CSS\" />
     <Folder Include="Employees\" />
     <Folder Include="Images\" />
     <Folder Include="ProjectManagement\" />
