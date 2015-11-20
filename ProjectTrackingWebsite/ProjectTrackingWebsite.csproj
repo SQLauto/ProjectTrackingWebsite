@@ -80,6 +80,17 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="CSS\" />
+    <Folder Include="Employees\" />
+    <Folder Include="Images\" />
+    <Folder Include="ProjectManagement\" />
+    <Folder Include="Scripts\" />
+    <Folder Include="Services\" />
+    <Folder Include="Tasks\" />
+    <Folder Include="UserStories\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
