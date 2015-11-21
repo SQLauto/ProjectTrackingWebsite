@@ -175,6 +175,10 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PTEmployeesController.cs" />
+    <Compile Include="Controllers\PTManagerCommentsController.cs" />
+    <Compile Include="Controllers\PTProjectsController.cs" />
+    <Compile Include="Controllers\PTUserStoryController.cs" />
+    <Compile Include="Controllers\PTUserTasksController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Employee.cs">
       <DependentUpon>ProjectTrackingDB.tt</DependentUpon>
@@ -186,6 +190,10 @@
       <DependentUpon>ProjectTrackingDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\EmployeesRepository.cs" />
+    <Compile Include="Models\ManagerCommentsRepository.cs" />
+    <Compile Include="Models\ProjectsRepository.cs" />
+    <Compile Include="Models\UserStoryRepository.cs" />
+    <Compile Include="Models\UserTasksRepository.cs" />
     <Compile Include="Project.cs">
       <DependentUpon>ProjectTrackingDB.tt</DependentUpon>
     </Compile>
