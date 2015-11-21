@@ -1,7 +1,4 @@
 ﻿using ProjectTrackingServices.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -9,7 +6,7 @@ using System.Web.Http.Cors;
 
 namespace ProjectTrackingServices.Controllers
 {
-    [EnableCors(origins: "http://localhost:55058", headers: "*", methods: "*")]
+    [EnableCors(origins: "http://localhost:54758", headers: "*", methods: "*")]
     public class PTEmployeesController : ApiController
     {
         // GET api/ptemployees
