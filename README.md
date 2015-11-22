@@ -12,3 +12,5 @@ Following tutorials below:
 
 <http://www.dotnetcurry.com/angularjs/1108/angularjs-views-directives>
 
+<http://www.dotnetcurry.com/angularjs/1111/using-angularjs-services>
+
