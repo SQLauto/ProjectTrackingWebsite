@@ -96,6 +96,9 @@
     <Content Include="CSS\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Home.html" />
+    <Content Include="Images\facebook-icon.png" />
+    <Content Include="Images\linkedin.png" />
+    <Content Include="Images\Twitter_bird_icon.png" />
     <Content Include="packages.config" />
     <Content Include="README.md" />
     <Content Include="Scripts\angular-animate.js" />
@@ -905,7 +908,6 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
     <Folder Include="Employees\" />
-    <Folder Include="Images\" />
     <Folder Include="ProjectManagement\" />
     <Folder Include="Services\" />
     <Folder Include="Tasks\" />
