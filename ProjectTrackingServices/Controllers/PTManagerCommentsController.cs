@@ -1,39 +1,43 @@
-﻿using System;
+﻿using ProjectTrackingServices.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ProjectTrackingServices.Controllers
 {
+    [EnableCors(origins: "http://localhost:54758", headers: "*", methods: "*")]
     public class PTManagerCommentsController : ApiController
     {
-        // GET: api/PTManagerComments
-        public IEnumerable<string> Get()
+        // GET api/ptmanagercomments
+        [Route("api/ptmanagercomments")]
+        public IEnumerable<ManagerComment> Get()
         {
-            return new string[] { "value1", "value2" };
+            return ManagerCommentsRepository.GetAllManagerComments();
         }
 
-        // GET: api/PTManagerComments/5
-        public string Get(int id)
+        // GET api/ptmanagercomments/5
+        [Route("api/ptmanagercomments/{id?}")]
+        public ManagerComment Get(int id)
         {
-            return "value";
+            return ManagerCommentsRepository.GetManagerComment(id);
         }
 
-        // POST: api/PTManagerComments
-        public void Post([FromBody]string value)
+        [Route("api/ptmanagercomments")]
+        public IEnumerable<ManagerComment> Post(ManagerComment comment)
         {
+            return ManagerCommentsRepository.InsertManagerComments(comment);
         }
 
-        // PUT: api/PTManagerComments/5
-        public void Put(int id, [FromBody]string value)
+        [Route("api/ptmanagercomments")]
+        public IEnumerable<ManagerComment> Put(ManagerComment comment)
         {
+            return ManagerCommentsRepository.UpdateManagerComments(comment);
         }
 
-        // DELETE: api/PTManagerComments/5
-        public void Delete(int id)
+        [Route("api/ptmanagercomments")]
+        public IEnumerable<ManagerComment> Delete(ManagerComment comment)
         {
+            return ManagerCommentsRepository.DeleteManagerComments(comment);
         }
     }
 }
