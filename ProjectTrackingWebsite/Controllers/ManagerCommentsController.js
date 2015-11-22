@@ -8,7 +8,7 @@
         };
         $http.get("http://localhost:2464/api/ptmanagercomments/1")
             .then(managerComments, errorDetails);
-        $scope.Title = "Manager comments Page";
+        $scope.Title = "Manager Comments Page";
     };
     app.controller("ManagerCommentsController", ManagerCommentsController);
 }());
