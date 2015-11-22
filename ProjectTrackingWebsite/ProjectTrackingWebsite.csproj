@@ -96,6 +96,7 @@
     <Content Include="CSS\bootstrap-paper.css" />
     <Content Include="CSS\bootstrap-paper.min.css" />
     <Content Include="CSS\Site.css" />
+    <Content Include="Employees\EmployeeDetails.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Home.html" />
     <Content Include="Images\facebook-icon.png" />
@@ -910,7 +911,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Employees\" />
     <Folder Include="ProjectManagement\" />
     <Folder Include="Services\" />
     <Folder Include="Tasks\" />
