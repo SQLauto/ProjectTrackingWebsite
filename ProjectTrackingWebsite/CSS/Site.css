@@ -2,7 +2,7 @@
     padding: 1%;
     background-color: #e3f2fd;
 }
-h1, .h1, h2, .h2, h3, .h3 {
+h1, .h1 {
     color: #fff;
 }
 .carousel {
@@ -26,4 +26,7 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 .panel-primary>.panel-heading {
     background-color: #2196f3;
+}
+.table {
+    table-layout:auto;
 }
