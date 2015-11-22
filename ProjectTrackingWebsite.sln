@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectTrackingWebsite", "ProjectTrackingWebsite\ProjectTrackingWebsite.csproj", "{F56D8175-87C0-4D88-86FA-7C6530951AF9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{44C86BD9-3C59-4389-8A55-D555722900CE} = {44C86BD9-3C59-4389-8A55-D555722900CE}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1AFD89DD-0233-4756-92C6-C0A369B48B98}"
 	ProjectSection(SolutionItems) = preProject
