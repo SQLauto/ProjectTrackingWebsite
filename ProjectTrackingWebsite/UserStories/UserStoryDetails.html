@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="ProjectTrackingModule">
+<head>
+    <title>User Story Details</title>
+    <script src="../Scripts/jquery-2.1.4.min.js"></script>
+    <link href="../CSS/bootstrap-paper.min.css" rel="stylesheet" />
+    <link href="../CSS/Site.css" rel="stylesheet" />
+    <script src="../Scripts/angular.min.js">
+    </script>
+    <script src="../Scripts/bootstrap.min.js">
+    </script>
+    <script src="../Scripts/app.js"></script>
+    <script src="../Controllers/UserStoriesController.js"></script>
+</head>
+<body ng-controller="UserStoriesController">
+    <h1>{{Title}}</h1>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr class="info">
+                <td>
+                    User Story ID
+                </td>
+                <td>
+                    User Story
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="success">
+                <td>
+                    {{Stories.userStoryID}}
+                </td>
+                <td>
+                    {{Stories.story}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
