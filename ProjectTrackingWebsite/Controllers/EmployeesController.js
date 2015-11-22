@@ -1,14 +1,14 @@
 ﻿(function () {
-    var EmployeesController = function ($scope) {
-        var employees = {
-            employeeName: "John Richard",
-            designation: "Project Manager",
-            contactNo: "+333 3888389",
-            eMailID: "john@projects.com",
-            skillSets: "ASP.NET, ASP.NET MVC"
+    var EmployeesController = function ($scope, $http) {
+        var employees = function (serviceResp) {
+            $scope.Employees = serviceResp.data;
         };
+        var errorDetails = function (serviceResp) {
+            $scope.Error = "Something went wrong ??";
+        };
+        $http.get("http://localhost:2464/api/ptemployees")
+            .then(employees, errorDetails);
         $scope.Title = "Employee Details Page";
-        $scope.Employees = employees;
     };
     app.controller("EmployeesController", EmployeesController);
 }());
