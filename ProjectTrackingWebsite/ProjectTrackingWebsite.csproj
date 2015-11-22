@@ -91,12 +91,23 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Controllers\EmployeesController.js" />
+    <Content Include="Controllers\HomeController.js" />
+    <Content Include="Controllers\ManagerCommentsController.js" />
+    <Content Include="Controllers\ProjectsController.js" />
+    <Content Include="Controllers\UserStoriesController.js" />
     <Content Include="CSS\bootstrap-paper.css" />
     <Content Include="CSS\bootstrap-paper.min.css" />
     <Content Include="CSS\Site.css" />
+    <Content Include="Employees\EmployeeDetails.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Home.html" />
+    <Content Include="Images\facebook-icon.png" />
+    <Content Include="Images\linkedin.png" />
+    <Content Include="Images\Twitter_bird_icon.png" />
     <Content Include="packages.config" />
+    <Content Include="ProjectManagement\ManagerCommentDetails.html" />
+    <Content Include="ProjectManagement\ProjectDetails.html" />
     <Content Include="README.md" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
@@ -123,6 +134,7 @@
     <Content Include="Scripts\angular-touch.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
@@ -872,6 +884,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
@@ -897,19 +910,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Controllers\ProjectTasksController.js" />
+    <Content Include="Tasks\ProjectTaskDetails.html" />
+    <Content Include="UserStories\UserStoryDetails.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Employees\" />
-    <Folder Include="Images\" />
-    <Folder Include="ProjectManagement\" />
     <Folder Include="Services\" />
-    <Folder Include="Tasks\" />
-    <Folder Include="UserStories\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

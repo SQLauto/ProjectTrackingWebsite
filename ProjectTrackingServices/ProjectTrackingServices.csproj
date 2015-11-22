@@ -177,8 +177,8 @@
     <Compile Include="Controllers\PTEmployeesController.cs" />
     <Compile Include="Controllers\PTManagerCommentsController.cs" />
     <Compile Include="Controllers\PTProjectsController.cs" />
-    <Compile Include="Controllers\PTUserStoryController.cs" />
-    <Compile Include="Controllers\PTUserTasksController.cs" />
+    <Compile Include="Controllers\PTUserStoriesController.cs" />
+    <Compile Include="Controllers\PTTasksController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Employee.cs">
       <DependentUpon>ProjectTrackingDB.tt</DependentUpon>
@@ -192,8 +192,8 @@
     <Compile Include="Models\EmployeesRepository.cs" />
     <Compile Include="Models\ManagerCommentsRepository.cs" />
     <Compile Include="Models\ProjectsRepository.cs" />
-    <Compile Include="Models\UserStoryRepository.cs" />
-    <Compile Include="Models\UserTasksRepository.cs" />
+    <Compile Include="Models\UserStoriesRepository.cs" />
+    <Compile Include="Models\TasksRepository.cs" />
     <Compile Include="Project.cs">
       <DependentUpon>ProjectTrackingDB.tt</DependentUpon>
     </Compile>
@@ -316,7 +316,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>56024</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:56024/</IISUrl>
+          <IISUrl>http://localhost:2464/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

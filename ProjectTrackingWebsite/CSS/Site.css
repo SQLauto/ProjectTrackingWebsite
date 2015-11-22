@@ -1,2 +1,32 @@
 ﻿body {
+    padding: 1%;
+    background-color: #e3f2fd;
+}
+h2, .h2 {
+    color: #fff;
+}
+.carousel {
+    background-color: #2196f3;
+}
+.carousel p {
+    color: #fff;
+}
+.btn-primary {
+    color: #000;
+    background-color: #76ff03;
+}
+.btn-primary:hover {
+    color: #000;
+    background-color: #b2ff59;
+}
+.navbar-default .navbar-nav>.active>a,
+ .navbar-default .navbar-nav>.active>a:hover,
+ .navbar-default .navbar-nav>.active>a:focus {
+    background-color: #fff;
+}
+.panel-primary>.panel-heading {
+    background-color: #2196f3;
+}
+.table {
+    table-layout:auto;
 }
