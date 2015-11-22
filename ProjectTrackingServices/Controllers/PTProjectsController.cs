@@ -1,39 +1,57 @@
-﻿using System;
+﻿using ProjectTrackingServices.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace ProjectTrackingServices.Controllers
 {
+    [EnableCors(origins: "http://localhost:54758", headers: "*", methods: "*")]
     public class PTProjectsController : ApiController
     {
-        // GET: api/PTProjects
-        public IEnumerable<string> Get()
+        ProjectsRepository repository;
+
+        public PTProjectsController()
         {
-            return new string[] { "value1", "value2" };
+            repository = new ProjectsRepository();
         }
 
-        // GET: api/PTProjects/5
-        public string Get(int id)
+        // GET api/projects
+        [Route("api/ptprojects")]
+        public IEnumerable<Project> Get()
         {
-            return "value";
+            return repository.GetAllProjects();
         }
 
-        // POST: api/PTProjects
-        public void Post([FromBody]string value)
+        // GET api/projects/5
+        [Route("api/ptprojects/{id?}")]
+        public Project Get(int id)
         {
+            return repository.GetProject(id);
         }
 
-        // PUT: api/PTProjects/5
-        public void Put(int id, [FromBody]string value)
+        [Route("api/ptprojects/{name:alpha}")]
+        public IEnumerable<Project> Get(string name)
         {
+            return repository.GetProjectByName(name);
         }
 
-        // DELETE: api/PTProjects/5
-        public void Delete(int id)
+        [Route("api/ptprojects")]
+        public IEnumerable<Project> Post(Project p)
         {
+            return repository.InsertProject(p);
+        }
+
+        [Route("api/ptprojects/{id}")]
+        public IEnumerable<Project> Put([FromBody]Project p)
+        {
+            return repository.UpdateProject(p);
+        }
+
+        [Route("api/ptprojects/{id}")]
+        [HttpDelete]
+        public IEnumerable<Project> Delete(int id)
+        {
+            return repository.DeleteProject(id);
         }
     }
 }
