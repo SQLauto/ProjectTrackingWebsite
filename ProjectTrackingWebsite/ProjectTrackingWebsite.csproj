@@ -93,6 +93,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Controllers\EmployeesController.js" />
     <Content Include="Controllers\HomeController.js" />
+    <Content Include="Controllers\ProjectsController.js" />
     <Content Include="CSS\bootstrap-paper.css" />
     <Content Include="CSS\bootstrap-paper.min.css" />
     <Content Include="CSS\Site.css" />
@@ -103,6 +104,7 @@
     <Content Include="Images\linkedin.png" />
     <Content Include="Images\Twitter_bird_icon.png" />
     <Content Include="packages.config" />
+    <Content Include="ProjectManagement\ProjectDetails.html" />
     <Content Include="README.md" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
@@ -911,7 +913,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ProjectManagement\" />
     <Folder Include="Services\" />
     <Folder Include="Tasks\" />
     <Folder Include="UserStories\" />

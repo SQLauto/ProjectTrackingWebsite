@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en" ng-app="ProjectTrackingModule">
 <head>
-    <title>Employee Details</title>
+    <title>Project Details</title>
     <script src="../Scripts/jquery-2.1.4.min.js"></script>
     <link href="../CSS/bootstrap-paper.min.css" rel="stylesheet" />
     <link href="../CSS/Site.css" rel="stylesheet" />
@@ -10,52 +10,46 @@
     <script src="../Scripts/bootstrap.min.js">
     </script>
     <script src="../Scripts/app.js"></script>
-    <script src="../Controllers/EmployeesController.js"></script>
+    <script src="../Controllers/ProjectsController.js"></script>
 </head>
-<body ng-controller="EmployeesController">
+<body ng-controller="ProjectsController">
     <h1>{{Title}}</h1>
     <table class="table table-striped table-hover">
         <thead>
             <tr class="info">
                 <td>
-                    Employee ID
+                    Project ID
                 </td>
                 <td>
-                    Employee Name
+                    Project Name
                 </td>
                 <td>
-                    Designation
+                    Start Date
                 </td>
                 <td>
-                    Contact No.
+                    End Date
                 </td>
                 <td>
-                    EMailID
-                </td>
-                <td>
-                    Skill Sets
+                    Client Name
                 </td>
             </tr>
         </thead>
         <tbody>
-            <tr class="success" ng-repeat="Employee in Employees">
+            <tr class="success">
                 <td>
-                    {{Employee.employeeID}}
+                    {{Projects.projectID}}
                 </td>
                 <td>
-                    {{Employee.employeeName}}
+                    {{Projects.projectName}}
                 </td>
                 <td>
-                    {{Employee.designation}}
+                    {{Projects.startDate}}
                 </td>
                 <td>
-                    {{Employee.contactNo}}
+                    {{Projects.endDate}}
                 </td>
                 <td>
-                    {{Employee.eMailID}}
-                </td>
-                <td>
-                    {{Employee.skillSets}}
+                    {{Projects.clientName}}
                 </td>
             </tr>
         </tbody>
