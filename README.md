@@ -1,4 +1,4 @@
-# ProjectTrackingWebsite
+# Project Tracking Website
 
 Project Tracker using ASP.NET, AngujarJS and SQL Server.
 
