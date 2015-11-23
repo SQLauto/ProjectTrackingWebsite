@@ -1,67 +1,73 @@
-﻿<!DOCTYPE html>
-<html lang="en" ng-app="ProjectTrackingModule">
-<head>
-    <title>Employee Details</title>
-    <script src="../Scripts/jquery-2.1.4.min.js"></script>
-    <link href="../CSS/bootstrap-paper.min.css" rel="stylesheet" />
-    <link href="../CSS/Site.css" rel="stylesheet" />
-    <script src="../Scripts/angular.min.js"></script>
-    <script src="../Scripts/bootstrap.min.js"></script>
-    <script src="../Scripts/app.js"></script>
-    <script src="../Services/EmployeesService.js"></script>
-    <script src="../Controllers/EmployeesController.js"></script>
-</head>
-<body ng-controller="EmployeesController">
-    <h1>{{Title}}</h1>
-    <form name="searchEmployeeForm" ng-submit="searchEmployees(employeeName)">
-        Enter Employee Name Or Character To Search - <input type="text" required placeholder="Employee Name" ng-model="employeeName" />
-        <input type="submit" value="Search Employee" />
-    </form>
-    <table class="table table-striped table-hover"  ng-show="Employees"> <!-- TODO: bug hiding table -->
-        <thead>
-            <tr class="info">
-                <td>
-                    Employee ID
-                </td>
-                <td>
-                    Employee Name
-                </td>
-                <td>
-                    Designation
-                </td>
-                <td>
-                    Contact No.
-                </td>
-                <td>
-                    EMailID
-                </td>
-                <td>
-                    Skill Sets
-                </td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="success" ng-repeat="Employee in Employees | orderBy:'+employeeName'">
-                <td>
-                    {{Employee.employeeID}}
-                </td>
-                <td>
-                    {{Employee.employeeName}}
-                </td>
-                <td>
-                    {{Employee.designation}}
-                </td>
-                <td>
-                    {{Employee.contactNo}}
-                </td>
-                <td>
-                    {{Employee.eMailID}}
-                </td>
-                <td>
-                    {{Employee.skillSets}}
-                </td>
-            </tr>
-        </tbody>
+﻿<h1>{{Title}}</h1>
+<hr />
+<a href="#NewEmployee" class="btn btn-primary">Add New Employee</a>
+<hr />
+<form name="searchEmployeeForm" ng-submit="SearchEmployees(EmployeeName)">
+    <table>
+        <tr>
+            <td>Enter Employee Name Or Character To Search - </td>
+            <td><input type="text" required placeholder="Enter Employee Name" ng-model="EmployeeName" class="form-control" style="width:300px" /></td>
+            <td><input type="submit" value="Search Employee" class="btn btn-primary" /></td>
+        </tr>
     </table>
-</body>
-</html>
+
+
+</form>
+<table class="table table-striped table-hover" ng-show="Employees">
+    <thead>
+        <tr class="info">
+            <td>
+                Employee ID
+            </td>
+            <td>
+                Employee Name
+            </td>
+            <td>
+                Designation
+            </td>
+            <td>
+                Contact No.
+            </td>
+            <td>
+                EMailID
+            </td>
+            <td>
+                Skill Sets
+            </td>
+            <td>
+                Modify Employee
+            </td>
+            <td>
+                Delete Employee
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success" ng-repeat="Employee in Employees | orderBy:'+employeeName'">
+            <td>
+                {{Employee.employeeID}}
+            </td>
+            <td>
+                {{Employee.employeeName}}
+            </td>
+            <td>
+                {{Employee.designation}}
+            </td>
+            <td>
+                {{Employee.contactNo}}
+            </td>
+            <td>
+                {{Employee.eMailID}}
+            </td>
+            <td>
+                {{Employee.skillSets}}
+            </td>
+            <td>
+                <input type="button" value="Modify" class="btn btn-info" />
+            </td>
+            <td>
+                <input type="button" value="Delete" class="btn btn-info" />
+            </td>
+        </tr>
+    </tbody>
+</table>

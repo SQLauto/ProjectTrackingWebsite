@@ -27,6 +27,6 @@ h2, .h2 {
 .panel-primary>.panel-heading {
     background-color: #2196f3;
 }
-.table {
+table {
     table-layout:auto;
 }

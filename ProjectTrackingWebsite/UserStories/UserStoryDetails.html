@@ -1,47 +1,38 @@
-﻿<!DOCTYPE html>
-<html lang="en" ng-app="ProjectTrackingModule">
-<head>
-    <title>User Story Details</title>
-    <script src="../Scripts/jquery-2.1.4.min.js"></script>
-    <link href="../CSS/bootstrap-paper.min.css" rel="stylesheet" />
-    <link href="../CSS/Site.css" rel="stylesheet" />
-    <script src="../Scripts/angular.min.js">
-    </script>
-    <script src="../Scripts/bootstrap.min.js">
-    </script>
-    <script src="../Scripts/app.js"></script>
-    <script src="../Services/UserStoriesService.js"></script>
-    <script src="../Controllers/UserStoriesController.js"></script>
-</head>
-<body ng-controller="UserStoriesController">
-    <h1>{{Title}}</h1>
-    <table class="table table-striped table-hover">
-        <thead>
-            <tr class="info">
-                <td>
-                    User Story ID
-                </td>
-                <td>
-                    User Story
-                </td>
-                <td>
-                    Project ID
-                </td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr class="success" ng-repeat="userStory in Stories">
-                <td>
-                    {{userStory.userStoryID}}
-                </td>
-                <td>
-                    {{userStory.story}}
-                </td>
-                <td>
-                    {{userStory.projectID}}
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</body>
-</html>
+﻿<h1>{{Title}}</h1>
+<hr />
+<a href="#NewUserStory" class="btn btn-primary">Add New User Story</a>
+<hr />
+<table class="table table-striped table-hover">
+    <thead>
+        <tr class="info">
+            <td>
+                User Story ID
+            </td>
+            <td>
+                User Story
+            </td>
+            <td>
+                Modify Story
+            </td>
+            <td>
+                Delete Story
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="success" ng-repeat="stories in Stories">
+            <td>
+                {{stories.userStoryID}}
+            </td>
+            <td>
+                {{stories.story}}
+            </td>
+            <td>
+                <input type="button" value="Modify" class="btn btn-info" />
+            </td>
+            <td>
+                <input type="button" value="Delete" class="btn btn-info" />
+            </td>
+        </tr>
+    </tbody>
+</table>
