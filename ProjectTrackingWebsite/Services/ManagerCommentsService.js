@@ -11,5 +11,6 @@
         };
     };
     var module = angular.module("ProjectTrackingModule");
-    module.factory("managerCommentsService", ["$http", managerCommentsService]);
+    module.factory("managerCommentsService", ["$http", managerCommentsService]
+);
 }());

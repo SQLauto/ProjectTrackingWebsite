@@ -6,19 +6,11 @@
                             return serviceResp.data;
                         });
         };
-
-        var addProjectTask = function (task) {
-            return $http.post("http://localhost:2464/api/ptprojecttasks", task)
-                        .then(function (response) {
-                            return response.data;
-                        });
-        };
-
         return {
-            projectTasks: projectTasks,
-            addProjectTask: addProjectTask
+            projectTasks: projectTasks
         };
     };
     var module = angular.module("ProjectTrackingModule");
     module.factory("projectTasksService", ["$http", projectTasksService]);
+
 }());

@@ -10,6 +10,7 @@
     <script src="../Scripts/bootstrap.min.js">
     </script>
     <script src="../Scripts/app.js"></script>
+    <script src="../Services/UserStoriesService.js"></script>
     <script src="../Controllers/UserStoriesController.js"></script>
 </head>
 <body ng-controller="UserStoriesController">
@@ -23,15 +24,21 @@
                 <td>
                     User Story
                 </td>
+                <td>
+                    Project ID
+                </td>
             </tr>
         </thead>
         <tbody>
-            <tr class="success">
+            <tr class="success" ng-repeat="userStory in Stories">
                 <td>
-                    {{Stories.userStoryID}}
+                    {{userStory.userStoryID}}
                 </td>
                 <td>
-                    {{Stories.story}}
+                    {{userStory.story}}
+                </td>
+                <td>
+                    {{userStory.projectID}}
                 </td>
             </tr>
         </tbody>

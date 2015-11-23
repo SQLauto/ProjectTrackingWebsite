@@ -6,19 +6,12 @@
                             return serviceResp.data;
                         });
         };
-
-        var addUserStory = function (userStory) {
-            return $http.post("http://localhost:2464/api/ptuserstories",userStory)
-                        .then(function (result) {
-                            return result.data;
-                        });
-        };
-
         return {
-            userStories: userStories,
-            addUserStory: addUserStory
+            userStories: userStories
         };
     };
     var module = angular.module("ProjectTrackingModule");
+
     module.factory("userStoriesService", ["$http", userStoriesService]);
+
 }());

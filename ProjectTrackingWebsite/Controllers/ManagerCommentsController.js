@@ -7,7 +7,8 @@
             $scope.Error = "Something went wrong ??";
         };
         managerCommentsService.managerComments().then(managerComments, errorDetails);
-        $scope.Title = "Manager comments Page";
+        $scope.Title = "Manager Comments Page";
     };
     app.controller("ManagerCommentsController", ["$scope", "managerCommentsService", ManagerCommentsController]);
+
 }());
