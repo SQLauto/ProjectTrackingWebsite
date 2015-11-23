@@ -8,6 +8,7 @@
     <script src="../Scripts/angular.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
     <script src="../Scripts/app.js"></script>
+    <script src="../Services/ManagerCommentsService.js"></script>
     <script src="../Controllers/ManagerCommentsController.js"></script>
 </head>
 <body ng-controller="ManagerCommentsController">
@@ -24,12 +25,12 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="success">
+            <tr class="success" ng-repeat="Comment in Comments">
                 <td>
-                    {{Comments.managerCommentID}}
+                    {{Comment.managerCommentID}}
                 </td>
                 <td>
-                    {{Comments.comments}}
+                    {{Comment.comments}}
                 </td>
             </tr>
         </tbody>

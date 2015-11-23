@@ -10,6 +10,7 @@
     <script src="../Scripts/bootstrap.min.js">
     </script>
     <script src="../Scripts/app.js"></script>
+    <script src="../Services/ProjectsService.js"></script>
     <script src="../Controllers/ProjectsController.js"></script>
 </head>
 <body ng-controller="ProjectsController">
@@ -35,21 +36,21 @@
             </tr>
         </thead>
         <tbody>
-            <tr class="success">
+            <tr class="success" ng-repeat="Project in Projects">
                 <td>
-                    {{Projects.projectID}}
+                    {{Project.projectID}}
                 </td>
                 <td>
-                    {{Projects.projectName}}
+                    {{Project.projectName}}
                 </td>
                 <td>
-                    {{Projects.startDate|date:'short'}}
+                    {{Project.startDate|date:'short'}}}
                 </td>
                 <td>
-                    {{Projects.endDate|date:'short'}}
+                    {{Project.endDate|date:'short'}}}
                 </td>
                 <td>
-                    {{Projects.clientName}}
+                    {{Project.clientName}}
                 </td>
             </tr>
         </tbody>
