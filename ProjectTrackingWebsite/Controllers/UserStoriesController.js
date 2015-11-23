@@ -1,14 +1,26 @@
 ﻿(function () {
-    var UserStoriesController = function ($scope, $http) {
-        var userStories = function (serviceResp) {
-            $scope.Stories = serviceResp.data;
+    var UserStoriesController = function ($scope, $location, userStoriesService, projectService) {
+        var userStories = function (data) {
+            $scope.Stories = data;
         };
         var errorDetails = function (serviceResp) {
             $scope.Error = "Something went wrong ??";
         };
-        $http.get("http://localhost:2464/api/ptuserstories/1")
-            .then(userStories, errorDetails);
+
+        $scope.addUserStory = function () {
+            userStoriesService.addUserStory({ projectID: $scope.userStory.projectSelected.projectID, story: $scope.userStory.story })
+                        .then(function (userStories) {
+                            $location.path("/UserStories");
+                        });
+        };
+
+        userStoriesService.userStories().then(userStories, errorDetails);
+
+        projectService.projects().then(function (projects) {
+            $scope.projects = projects;
+        });
+
         $scope.Title = "User Stories Page";
     };
-    app.controller("UserStoriesController", UserStoriesController);
+    app.controller("UserStoriesController", ["$scope", "$location", "userStoriesService", "projectService", UserStoriesController]);
 }());

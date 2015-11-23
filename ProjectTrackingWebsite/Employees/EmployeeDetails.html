@@ -8,12 +8,13 @@
     <script src="../Scripts/angular.min.js"></script>
     <script src="../Scripts/bootstrap.min.js"></script>
     <script src="../Scripts/app.js"></script>
+    <script src="../Services/EmployeesService.js"></script>
     <script src="../Controllers/EmployeesController.js"></script>
 </head>
 <body ng-controller="EmployeesController">
     <h1>{{Title}}</h1>
-    <form name="searchEmployeeForm" ng-submit="SearchEmployee(EmployeeName)">
-        Enter Employee Name Or Character To Search - <input type="text" required placeholder="Employee Name" ng-model="EmployeeName" />
+    <form name="searchEmployeeForm" ng-submit="searchEmployees(employeeName)">
+        Enter Employee Name Or Character To Search - <input type="text" required placeholder="Employee Name" ng-model="employeeName" />
         <input type="submit" value="Search Employee" />
     </form>
     <table class="table table-striped table-hover"  ng-show="Employees"> <!-- TODO: bug hiding table -->
