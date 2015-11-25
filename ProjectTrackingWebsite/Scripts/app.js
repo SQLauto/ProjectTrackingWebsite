@@ -9,6 +9,14 @@ app.config(function ($routeProvider) {
             templateUrl: "ProjectManagement/ProjectDetails.html",
             controller: "ProjectsController"
         })
+        .when("/NewProject", {
+            templateUrl: "ProjectManagement/ProjectInsert.html",
+            controller: "ProjectsController"
+        })
+        .when("/ModifyProject/:projectID", {
+            templateUrl: "ProjectManagement/ProjectModify.html",
+            controller: "ProjectsController"
+        })
         .when("/UserStories", {
             templateUrl: "UserStories/UserStoryDetails.html",
             controller: "UserStoriesController"

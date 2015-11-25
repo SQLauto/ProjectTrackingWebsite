@@ -100,6 +100,7 @@
     <Content Include="CSS\bootstrap-paper.min.css" />
     <Content Include="CSS\Site.css" />
     <Content Include="Employees\EmployeeDetails.html" />
+    <Content Include="Employees\EmployeeInsert.html" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Layout.html" />
     <Content Include="Home.html" />
@@ -109,6 +110,8 @@
     <Content Include="packages.config" />
     <Content Include="ProjectManagement\ManagerCommentDetails.html" />
     <Content Include="ProjectManagement\ProjectDetails.html" />
+    <Content Include="ProjectManagement\ProjectInsert.html" />
+    <Content Include="ProjectManagement\ProjectModify.html" />
     <Content Include="README.md" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
@@ -918,7 +921,9 @@
     <Content Include="Services\ProjectTasksService.js" />
     <Content Include="Services\UserStoriesService.js" />
     <Content Include="Tasks\ProjectTaskDetails.html" />
+    <Content Include="Tasks\ProjectTaskInsert.html" />
     <Content Include="UserStories\UserStoryDetails.html" />
+    <Content Include="UserStories\UserStoryInsert.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
