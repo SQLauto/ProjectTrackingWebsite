@@ -17,33 +17,21 @@
             <td>
                 Task Completion (%)
             </td>
-            <td>
-                Modify Task
-            </td>
-            <td>
-                Delete Task
-            </td>
         </tr>
     </thead>
     <tbody>
-        <tr class="success" ng-repeat="Task in Tasks">
+        <tr class="success" ng-repeat="task in Tasks">
             <td>
-                {{Task.projectTaskID}}
+                {{task.projectTaskID}}
             </td>
             <td>
-                {{Task.taskStartDate|date:'dd/MM/yyyy'}}
+                {{task.taskStartDate|date:'dd/MM/yyyy'}}
             </td>
             <td>
-                {{Task.taskEndDate|date:'dd/MM/yyyy'}}
+                {{task.taskEndDate|date:'dd/MM/yyyy'}}
             </td>
             <td>
-                {{Task.taskCompletion}} &nbsp;%
-            </td>
-            <td>
-                <input type="button" value="Modify" class="btn btn-info" />
-            </td>
-            <td>
-                <input type="button" value="Delete" class="btn btn-info" />
+                {{task.taskCompletion}} &nbsp;%
             </td>
         </tr>
     </tbody>

@@ -10,14 +10,13 @@
         <div class="form-group">
             <label for="projectID" class="col-lg-2 control-label">Project ID</label>
             <div class="col-lg-10">
-                <!--<input type="text" readonly class="form-control" ng-model="userStory.projectID">-->
-                <select ng-model="userStory.projectSelected" ng-options="project.projectID for project in projects" style="color: #000000; width: 30px; padding: 5px;"></select>
+                <input type="text" readonly class="form-control" ng-model="userStory.projectID">
             </div>
         </div>
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
                 <a href="#UserStories" class="btn btn-default">Cancel</a>
-                <a class="btn btn-primary" ng-click="addUserStory()">Save User Story</a>
+                <a href="#UserStories" class="btn btn-primary">Save User Story</a>
             </div>
         </div>
     </fieldset>
