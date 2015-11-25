@@ -12,26 +12,20 @@
                 User Story
             </td>
             <td>
-                Modify Story
-            </td>
-            <td>
-                Delete Story
+                Project ID
             </td>
         </tr>
     </thead>
     <tbody>
-        <tr class="success" ng-repeat="stories in Stories">
+        <tr class="success" ng-repeat="userStory in Stories">
             <td>
-                {{stories.userStoryID}}
+                {{userStory.userStoryID}}
             </td>
             <td>
-                {{stories.story}}
+                {{userStory.story}}
             </td>
             <td>
-                <input type="button" value="Modify" class="btn btn-info" />
-            </td>
-            <td>
-                <input type="button" value="Delete" class="btn btn-info" />
+                {{userStory.projectID}}
             </td>
         </tr>
     </tbody>

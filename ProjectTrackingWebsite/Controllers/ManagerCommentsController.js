@@ -10,5 +10,4 @@
         $scope.Title = "Manager Comments Page";
     };
     app.controller("ManagerCommentsController", ["$scope", "managerCommentsService", ManagerCommentsController]);
-
 }());
